@@ -2,6 +2,7 @@
 #include <QSerialPort>
 #include "arduino-controller.h"
 using namespace std;
+using namespace Ac;
 
 void initQtSerialPort(QSerialPort &sp,const QString &portName){
     sp.setPortName(portName);
@@ -16,7 +17,7 @@ int main()
     cout << "Start!" << endl;
     QSerialPort sp;
     initQtSerialPort(sp,"com20");
-    Ac::Arduino arduino;
+    Arduino arduino;
 
     arduino.setSendHandler([&sp](const char*data,int size)->int{
         return sp.write(data,size);
