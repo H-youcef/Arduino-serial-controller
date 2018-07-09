@@ -26,8 +26,8 @@ int main()
         return sp.read(data,size);
     });
     
-    arduino.pinMode(13,Ac::OUTPUT);
-    arduino.digitalWrite(13,Ac::HIGH);
+    arduino.pinMode(13,OUTPUT);
+    arduino.digitalWrite(13,HIGH);
     
     return 0;
 }
