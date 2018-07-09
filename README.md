@@ -1,2 +1,5 @@
 # Arduino-serial-controller
-A simple not yet finished command over serial controller
+
+The Library is independent of library used handle serial communications;
+
+Operations are thread safe on the same Arduino instance.
