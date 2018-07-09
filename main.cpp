@@ -24,6 +24,9 @@ int main()
     arduino.setReceiveHandler([&sp](char*data,int size)->int{
         return sp.read(data,size);
     });
-
+    
+    arduino.pinMode(13,Ac::OUTPUT);
+    arduino.digitalWrite(13,Ac::HIGH);
+    
     return 0;
 }
